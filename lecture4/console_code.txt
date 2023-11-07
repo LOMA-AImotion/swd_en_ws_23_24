@@ -1,0 +1,115 @@
+
+(base) C:\Users\Schiendorfer>python
+Python 3.8.18 (default, Sep 11 2023, 13:39:12) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> (3, 1) == (1, 3)
+False
+>>> (3, 1) == (3, 1)
+True
+>>> (3, 1, 1) == (3, 1)
+False
+>>> {3, 1, 1} == {3, 1}
+True
+>>> tpl = (3, 1, 2)
+>>> tpl[0]
+3
+>>> tpl[1]
+1
+>>> tpl[2]
+2
+>>> tpl[3]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: tuple index out of range
+>>> tpl[2] = 10
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>> tpl = [3, 1, 2]
+>>> tpl[2] = 10
+>>> tpl
+[3, 1, 10]
+>>> tpl = ()
+>>> tpl
+()
+>>> tpl.append(3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'tuple' object has no attribute 'append'
+>>> tpl.add(3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'tuple' object has no attribute 'add'
+>>> tpl = (3, 1)
+>>> tpl
+(3, 1)
+>>> x, y = tpl
+>>> x
+3
+>>> y
+1
+>>> l = [(3, 1), (4, 2), (5, 10)]
+>>> for i in l:
+...   print(i)
+...
+(3, 1)
+(4, 2)
+(5, 10)
+>>> for i in l:
+...   x, y = i
+...   print(x)
+...
+3
+4
+5
+>>>
+>>> for x, y in l:
+...   print(y)
+...
+1
+2
+10
+>>> friends = ["Rick", "Carl", "Maggie"]
+>>> friends
+['Rick', 'Carl', 'Maggie']
+>>> for friend in friend:
+...   print("Hi", friend)
+...
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'friend' is not defined
+>>> for friend in friends:
+...   print("Hi", friend)
+...
+Hi Rick
+Hi Carl
+Hi Maggie
+>>> for i in range(len(friends)):
+...   print(i, " friend", friends[i])
+...
+0  friend Rick
+1  friend Carl
+2  friend Maggie
+>>> for i, friend in enumerate(friends):
+...   print("Hi friend", i, ": ", friend)
+...
+Hi friend 0 :  Rick
+Hi friend 1 :  Carl
+Hi friend 2 :  Maggie
+>>> list(enumerate(friends))
+[(0, 'Rick'), (1, 'Carl'), (2, 'Maggie')]
+>>> friends
+['Rick', 'Carl', 'Maggie']
+>>> rsvps = [True, False, True, False]
+>>> list(zip(friends, rsvps))
+[('Rick', True), ('Carl', False), ('Maggie', True)]
+>>> rsvps = [True, False]
+>>> list(zip(friends, rsvps))
+[('Rick', True), ('Carl', False)]
+>>> registrations = [("John", "Munich"), ("Ada", "Munich"), ("Nina", "Ingolstadt"), ("Malik", "Augsburg")]
+>>> registrations
+[('John', 'Munich'), ('Ada', 'Munich'), ('Nina', 'Ingolstadt'), ('Malik', 'Augsburg')]
+>>> cities = {city for name, city in registrations}
+>>> cities
+{'Ingolstadt', 'Augsburg', 'Munich'}
+>>>
