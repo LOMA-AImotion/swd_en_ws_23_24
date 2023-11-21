@@ -1,0 +1,7 @@
+grumpy
+sleepy
+tired
+angry
+annoyed
+fearful
+joyful
