@@ -13,7 +13,7 @@ adjectives_file = os.path.join(directory, 'adjectives.txt')
 nouns = file_reader.read_file(nouns_file)
 adjectives = file_reader.read_file(adjectives_file)
 
-def generate_password(nouns, adjectives):
+def generate_password(nouns=nouns, adjectives=adjectives):
     # Draw an adjective
     adj = random.choice(adjectives)
 
