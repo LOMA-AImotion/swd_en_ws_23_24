@@ -5,3 +5,4 @@ angry
 annoyed
 fearful
 joyful
+exhausted

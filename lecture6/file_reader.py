@@ -16,5 +16,5 @@ adjectives_file = os.path.join(directory, 'adjectives.txt')
 
 nouns = read_file(nouns_file)
 adjectives = read_file(adjectives_file)
-print(nouns)
-print(adjectives)
+#print(nouns)
+#print(adjectives)
