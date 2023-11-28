@@ -30,8 +30,9 @@ def generate_password(nouns=nouns, adjectives=adjectives):
     # combine and return
     return adj + noun + str(rand_number) + char
 
-stop = False
-while not stop: 
-    password = generate_password(nouns, adjectives)
-    print("Your password is:", password)
-    stop = input("Stop? (y|n)") == "y"
+if __name__ == "__main__":
+    stop = False
+    while not stop: 
+        password = generate_password(nouns, adjectives)
+        print("Your password is:", password)
+        stop = input("Stop? (y|n)") == "y"
